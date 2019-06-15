@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  tictactoe:
+    image: 'bthorly/tic_tac_toe:latest'
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - 5000:5000

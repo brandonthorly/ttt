@@ -15,4 +15,5 @@ RUN pip install -r requirements.txt
 COPY . /usr/src/app
 
 #CMD ["/bin/bash"]
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "wsgi"]
+#CMD ["gunicorn", "-b", "0.0.0.0:5000", "wsgi"]
+CMD ["python", "server.py"]

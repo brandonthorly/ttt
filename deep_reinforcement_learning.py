@@ -137,7 +137,6 @@ def checkValue(sum):
 # creates the network
 def createNetwork():
     # network weights and biases
-
     W_layer1 = weight_variable([boardSize, layer_1_w])
     b_layer1 = bias_variable([layer_1_w])
 
@@ -159,14 +158,14 @@ def createNetwork():
     h_layer3 = tf.nn.relu(tf.matmul(h_layer2,W_layer3) + b_layer3)
 
     # output layer
-    y = tf.matmul(h_layer3,o_layer) + o_bais
+    y = tf.matmul(h_layer3, o_layer) + o_bais
     prediction = tf.argmax(y[0])
 
-    return x,y, prediction
+    return x, y, prediction
 
 
 def tainNetwork():
-    print()
+    print('train network')
 
     # create network
     inputState , Qoutputs, prediction = createNetwork()

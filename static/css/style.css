@@ -1,6 +1,20 @@
+header {
+    display: flex !important;
+}
+
+header > div {
+    flex: 1;
+}
+
+header > div.dropdown-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
     width: 1200px;
-    margin: 16px auto;
+    margin: 16px auto !important;
 }
 
 .myOptions {

@@ -1,4 +1,14 @@
 $(document).ready(function() {
+    let trainTime = '30 seconds';
+    const queryParams = window.location.search;
+    if (queryParams) {
+        if (queryParams.indexOf('90min') !== -1) {
+            trainTime = '90 minutes';
+        } else if (queryParams.indexOf('2min') !== -1) {
+            trainTime = '2 minutes';
+        }
+    }
+    document.getElementById('model-label').innerHTML = trainTime;
 
     // setting all variables.
 
